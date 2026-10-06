@@ -15,7 +15,8 @@ const structuredData = article ? { '@context': 'https://schema.org', '@type': 'B
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#234f3b" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f3eb" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#18201c" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
