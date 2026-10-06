@@ -1,0 +1,19 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { publishedFaqs, withBase, formatDate, readingMinutes } from '../../lib/content';
+export async function getStaticPaths() { return (await publishedFaqs()).map(faq => ({ params: { slug: faq.id }, props: { faq } })); }
+interface Props { faq: CollectionEntry<'faqs'>; }
+const { faq } = Astro.props;
+const { Content, headings } = await render(faq);
+const toc = headings.filter(heading => heading.depth === 2);
+const editUrl = `https://github.com/Plusero/powersys-faq/edit/main/src/content/faqs/${faq.id}.md`;
+---
+<BaseLayout title={faq.data.title} description={faq.data.description} article={{ published: faq.data.published, updated: faq.data.updated }}>
+  <article class="article-page container">
+    <a class="back-link" href={withBase('faqs/')}><span aria-hidden="true">←</span>All FAQs</a>
+    <header class="article-header"><span class="topic-label">{faq.data.topic}</span><h1>{faq.data.title}</h1><div class="article-meta"><time datetime={faq.data.published.toISOString()}>{formatDate(faq.data.published)}</time><span aria-hidden="true">·</span><span>{readingMinutes(faq.body)} min read</span>{faq.data.updated && <span>Updated {formatDate(faq.data.updated)}</span>}</div><div class="article-tags">{faq.data.tags.map(tag => <a href={`${withBase('faqs/')}?q=${encodeURIComponent(tag)}`}>{tag}</a>)}</div></header>
+    <div class="article-grid"><div class="article-body"><aside class="takeaway" aria-label="Short answer"><span class="eyebrow">THE SHORT ANSWER</span><p>{faq.data.takeaway}</p></aside><div class="prose"><Content /></div><div class="article-end"><Icon name="book" size={20}/><p>Have a correction or a question to add?<br/><a href={editUrl}>Suggest an edit on GitHub <Icon name="external" size={13}/></a></p></div></div>{toc.length > 0 && <aside class="article-sidebar"><nav aria-label="On this page"><span class="eyebrow">IN THIS ANSWER</span><ol>{toc.map(heading => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav><a class="sidebar-all" href={withBase('faqs/')}>Explore all FAQs <Icon name="arrow" size={16}/></a></aside>}</div>
+  </article>
+</BaseLayout>

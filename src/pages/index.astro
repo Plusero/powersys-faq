@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ForecastIllustration from '../components/ForecastIllustration.astro';
+import FaqCard from '../components/FaqCard.astro';
+import Icon from '../components/Icon.astro';
+import { publishedFaqs, withBase, faqUrl } from '../lib/content';
+const faqs = await publishedFaqs();
+const featured = faqs.find(faq => faq.data.featured) || faqs[0];
+const topics = [...new Set(faqs.map(faq => faq.data.topic))].sort();
+---
+<BaseLayout>
+  <section class="hero container">
+    <div class="hero-copy"><div class="eyebrow"><span class="small-dot"></span>KNOWLEDGE FOR A CHANGING GRID</div><h1>Big questions.<br/><em>Clearer answers.</em></h1><p>Making sense of power systems, one question at a time. Practical explanations, thoughtful examples, and sources you can explore.</p><div class="hero-actions"><a class="button button-primary" href={withBase('faqs/')}>Explore the FAQs <Icon name="arrow" size={19}/></a><a class="subtle-link" href={withBase('about/')}>About this collection</a></div></div>
+    <ForecastIllustration />
+  </section>
+  <section class="featured-section">
+    <div class="container featured-grid"><div class="section-intro"><span class="eyebrow">START WITH A QUESTION</span><h2>Good questions.<br/>Practical explanations.</h2><p>Start with a featured answer, then follow the sources to explore the idea in more depth.</p><span class="intro-note"><Icon name="book" size={17}/>A practical example to get started</span></div>{featured ? <FaqCard faq={featured} featured/> : <p>The first answer is on its way.</p>}</div>
+  </section>
+  <section class="topic-section container"><div class="section-heading"><div><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h2>Explore by topic</h2></div><a class="text-link" href={withBase('faqs/')}>All FAQs <Icon name="arrow" size={18}/></a></div><div class="topic-links">{topics.map(topic => <a href={`${withBase('faqs/')}?topic=${encodeURIComponent(topic)}`}><span class="topic-icon"><Icon name="bolt" size={19}/></span><span>{topic}</span><span class="topic-count">{String(faqs.filter(faq => faq.data.topic === topic).length).padStart(2, '0')}</span><Icon name="arrow" size={19}/></a>)}</div><p class="topic-footnote">A growing collection of answers. Each FAQ starts with a question and follows the evidence.</p></section>
+  {featured && <section class="reading-note container"><span class="reading-note-icon"><Icon name="book" size={22}/></span><p><strong>Short answer first. Context when it matters.</strong><br/>Each article brings together an explanation, a practical example, and links for further reading.</p><a href={faqUrl(featured)} aria-label="Read the featured FAQ"><Icon name="arrow" size={23}/></a></section>}
+</BaseLayout>

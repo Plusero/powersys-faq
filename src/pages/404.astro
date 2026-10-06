@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/content';
+---
+<BaseLayout title="Page not found" noindex><section class="not-found container"><span class="eyebrow">404 · PAGE NOT FOUND</span><h1>A little off the grid.</h1><p>This page could not be found. Let's get you back to the questions.</p><a class="button button-primary" href={withBase('faqs/')}>Explore the FAQs <span aria-hidden="true">→</span></a></section></BaseLayout>

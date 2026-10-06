@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+---
+<figure class="forecast-figure">
+  <div class="figure-header"><span class="figure-kicker">BEYOND A SINGLE NUMBER</span><Icon name="bolt" size={20} /></div>
+  <div class="figure-title">A forecast. And its possibilities.</div>
+  <svg class="forecast-chart" viewBox="0 0 420 218" role="img" aria-labelledby="forecast-title forecast-description">
+    <title id="forecast-title">Conceptual probabilistic power forecast</title>
+    <desc id="forecast-description">A central forecast curve surrounded by a shaded range of possible output. The range widens as uncertainty grows. This is a schematic, not measured data.</desc>
+    <defs><linearGradient id="band-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c6daaa" stop-opacity=".35"/><stop offset="1" stop-color="#c6daaa" stop-opacity=".04"/></linearGradient></defs>
+    <g stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="3 5"><path d="M26 42h370M26 86h370M26 130h370M26 174h370"/></g>
+    <path d="M26 164C60 162 72 130 105 114S161 86 197 53 251 42 290 61 342 48 396 71L396 154C342 131 331 155 290 144S231 132 197 130 143 153 105 153 60 182 26 182Z" fill="url(#band-fill)"/>
+    <path d="M26 164C60 162 72 130 105 114S161 86 197 53 251 42 290 61 342 48 396 71M26 182C60 182 72 153 105 153S161 153 197 130 251 132 290 144 342 131 396 154" fill="none" stroke="#adc497" stroke-opacity=".5" stroke-width="1"/>
+    <path d="M26 173C60 172 73 143 105 134S162 120 197 91 251 91 290 103 344 91 396 112" fill="none" stroke="#dceb9b" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="197" cy="91" r="5" fill="#dceb9b" stroke="#234f3b" stroke-width="3"/>
+    <g fill="#c4d3c8" font-family="system-ui,sans-serif" font-size="10"><text x="26" y="205">NEARER TERM</text><text x="396" y="205" text-anchor="end">FURTHER AHEAD</text></g>
+  </svg>
+  <div class="figure-legend"><span><i class="legend-line"></i>Central forecast</span><span><i class="legend-band"></i>Possible outcomes</span></div>
+  <figcaption>Illustrative schematic · not operational data</figcaption>
+</figure>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqCard from '../../components/FaqCard.astro';
+import Icon from '../../components/Icon.astro';
+import { publishedFaqs } from '../../lib/content';
+const faqs = await publishedFaqs();
+const topics = [...new Set(faqs.map(faq => faq.data.topic))].sort();
+---
+<BaseLayout title="Explore the FAQs" description="Browse practical answers to power-system questions. Search the collection or explore a topic.">
+  <section class="library container">
+    <div class="page-intro"><span class="eyebrow">THE FAQ LIBRARY</span><h1>A question is a<br/><em>good place to start.</em></h1><p>Find an explanation, follow an example, and take a closer look at the sources.</p></div>
+    <div class="library-controls" id="topics"><form class="search-form" role="search"><label class="sr-only" for="faq-search">Search FAQs</label><Icon name="search" size={21}/><input type="search" id="faq-search" name="q" placeholder="Search questions, concepts, or keywords…" autocomplete="off"/><button type="submit" class="search-submit" aria-label="Search FAQs"><Icon name="arrow" size={19}/></button></form><div class="topic-filters" role="group" aria-label="Filter by topic"><button type="button" class="filter-button" data-topic-filter="" aria-pressed="true">All topics <span>{faqs.length}</span></button>{topics.map(topic => <button type="button" class="filter-button" data-topic-filter={topic} aria-pressed="false">{topic}</button>)}</div></div>
+    <div class="results-bar"><p id="results-count" role="status" aria-live="polite">{faqs.length} {faqs.length === 1 ? 'answer' : 'answers'} to explore</p><button id="clear-filters" class="subtle-link" type="button" hidden>Clear filters</button></div>
+    <div class="faq-list">{faqs.map(faq => <FaqCard faq={faq} searchable/>)}</div>
+    <div id="empty-results" class="empty-state" hidden><Icon name="search" size={30}/><h2>No matching questions yet.</h2><p>Try another keyword or clear the topic filter to explore all FAQs.</p></div>
+  </section>
+</BaseLayout>
+<script>
+  const input = document.querySelector<HTMLInputElement>('#faq-search')!;
+  const form = document.querySelector<HTMLFormElement>('.search-form')!;
+  const filters = [...document.querySelectorAll<HTMLButtonElement>('[data-topic-filter]')];
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-faq-card]')];
+  const count = document.querySelector<HTMLElement>('#results-count')!;
+  const clear = document.querySelector<HTMLButtonElement>('#clear-filters')!;
+  const empty = document.querySelector<HTMLElement>('#empty-results')!;
+  let topic = '';
+
+  function update(syncUrl = true) {
+    const query = input.value.trim().toLocaleLowerCase();
+    const terms = query.split(/\s+/).filter(Boolean);
+    let visible = 0;
+    for (const card of cards) {
+      const matches = (!topic || card.dataset.topic === topic) && terms.every(term => (card.dataset.search || '').includes(term));
+      card.hidden = !matches;
+      if (matches) visible++;
+    }
+    for (const button of filters) button.setAttribute('aria-pressed', String(button.dataset.topicFilter === topic));
+    count.textContent = `${visible} ${visible === 1 ? 'answer' : 'answers'}${query || topic ? ' found' : ' to explore'}`;
+    empty.hidden = visible !== 0;
+    clear.hidden = !query && !topic;
+    if (syncUrl) {
+      const url = new URL(window.location.href);
+      query ? url.searchParams.set('q', input.value.trim()) : url.searchParams.delete('q');
+      topic ? url.searchParams.set('topic', topic) : url.searchParams.delete('topic');
+      window.history.replaceState(null, '', url);
+    }
+  }
+  function readUrl() {
+    const params = new URLSearchParams(window.location.search);
+    input.value = params.get('q') || '';
+    const requestedTopic = params.get('topic') || '';
+    topic = filters.some(button => button.dataset.topicFilter === requestedTopic) ? requestedTopic : '';
+    update(false);
+  }
+  input.addEventListener('input', () => update());
+  form.addEventListener('submit', event => { event.preventDefault(); update(); });
+  filters.forEach(button => button.addEventListener('click', () => { topic = button.dataset.topicFilter || ''; update(); }));
+  clear.addEventListener('click', () => { input.value = ''; topic = ''; update(); input.focus(); });
+  window.addEventListener('popstate', readUrl);
+  readUrl();
+</script>

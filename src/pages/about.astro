@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { withBase } from '../lib/content';
+---
+<BaseLayout title="About this collection">
+  <section class="about-page container"><div class="page-intro"><span class="eyebrow">ABOUT THIS COLLECTION</span><h1>Understanding the grid.<br/><em>One question at a time.</em></h1><p>Power Systems FAQ is a growing collection of blog-style answers to frequently asked questions about electric power systems.</p></div><div class="about-content prose"><h2>A place for practical explanations</h2><p>The goal is to make technical ideas easier to understand without losing the details that matter. Each FAQ begins with a question, gives a short answer, and develops the explanation with examples and references.</p><h2>Follow the sources</h2><p>Articles link to the material they discuss, so you can read the original and form your own view. Teaching examples are labelled as illustrations, and an application case study is considered in the context of its assumptions and limitations.</p><h2>A collection that can grow</h2><p>The first article explores how probabilistic forecasts can support decisions about renewable generation. Future FAQs can cover other power-system topics as questions arise.</p><p>Corrections and proposed questions are welcome through the <a href="https://github.com/Plusero/powersys-faq/issues">GitHub repository</a>.</p></div><a class="button button-primary" href={withBase('faqs/')}>Find your first answer <Icon name="arrow" size={19}/></a></section>
+</BaseLayout>

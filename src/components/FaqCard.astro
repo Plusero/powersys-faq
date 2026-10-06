@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from './Icon.astro';
+import { faqUrl, formatDate, readingMinutes } from '../lib/content';
+interface Props { faq: CollectionEntry<'faqs'>; featured?: boolean; searchable?: boolean; }
+const { faq, featured = false, searchable = false } = Astro.props;
+const searchText = [faq.data.title, faq.data.description, faq.data.topic, ...faq.data.tags, faq.body || ''].join(' ').toLowerCase();
+const Heading = featured ? 'h3' : 'h2';
+---
+<article class:list={['faq-card', { 'featured-card': featured }]} data-faq-card={searchable ? '' : undefined} data-topic={faq.data.topic} data-search={searchable ? searchText : undefined}>
+  <div class="card-topline"><span class="topic-label">{faq.data.topic}</span><span class="card-date">{formatDate(faq.data.published)}</span></div>
+  <Heading><a href={faqUrl(faq)}>{faq.data.title}</a></Heading>
+  <p>{faq.data.description}</p>
+  <div class="card-bottom"><span class="read-time"><Icon name="clock" size={15}/>{readingMinutes(faq.body)} min read</span><a class="text-link" href={faqUrl(faq)}>Read the answer <Icon name="arrow" size={18}/></a></div>
+</article>
