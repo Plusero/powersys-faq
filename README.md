@@ -1,5 +1,7 @@
 # Power Systems FAQ
 
+[Visit the Power Systems FAQ website](https://plusero.github.io/powersys-faq/)
+
 A growing collection of clear, source-backed answers to frequently asked questions in power systems. Articles are written in Markdown and published as a static [Astro](https://astro.build/) website on GitHub Pages.
 
 The first FAQ explains how probabilistic wind and solar forecasts support decisions, using [Dexter Energy's article](https://dexterenergy.ai/news/probabilistic-wind-and-solar-power-forecasting/) as a practical example.
