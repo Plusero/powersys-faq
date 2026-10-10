@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1524" viewBox="0 0 560 1524" role="img" aria-labelledby="title desc">
+  <title id="title">Auction deadlines for delivery at 18:00–18:15 in the Netherlands</title>
+  <desc id="desc">On the previous day, FCR capacity closes at 08:00, day-ahead energy at 12:00, IDA1 at 15:00, and IDA2 at 22:00. On the delivery day, IDA3 closes at 10:00 and covers noon to midnight. The example delivery is 18:00–18:15. Continuous intraday trading runs alongside auctions until the applicable gate closure. Post-delivery trading where available and imbalance settlement follow physical delivery. In parallel, aFRR and mFRR reserve capacity is procured before delivery; GOPACS coordinates day-ahead arrangements and intraday redispatch. During delivery, FCR responds to frequency, aFRR follows automatic control, mFRR responds on request, and agreed congestion adjustments change local flows.</desc>
+  <rect x="1" y="1" width="558" height="1522" rx="16" fill="#fcfbf6" stroke-width="2" stroke="#d2d7c9" />
+  <text x="26" y="36" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#315f48" letter-spacing="1">EXAMPLE DELIVERY · 18:00–18:15 ON D</text>
+  <text x="26" y="74" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" font-style="normal" fill="#2b382e">The auction clock</text>
+  <text x="26" y="108" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Dutch local market time · CET / CEST</text>
+  <rect x="22" y="134" width="516" height="50" rx="8" fill="#e7ecdd" />
+  <text x="40" y="167" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" font-style="normal" fill="#2b382e">D−1 · The previous day</text>
+  <path d="M 125 220 V 551" stroke="#7a8b72" stroke-width="3" />
+  <text x="36" y="232" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#315f48">08:00</text>
+  <rect x="118" y="217" width="14" height="14" fill="#fcfbf6" stroke="#315f48" stroke-width="2" />
+  <text x="150" y="232" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">FCR capacity auction closes</text>
+  <text x="150" y="263" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Reserve availability for D.</text>
+  <text x="150" y="290" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Capacity, rather than an energy sale.</text>
+  <path d="M 148 310 H 516" stroke="#7a8b72" stroke-dasharray="6 5" />
+  <text x="36" y="348" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#315f48">12:00</text>
+  <circle cx="125" cy="340" r="7" fill="#315f48" />
+  <text x="150" y="348" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">Day-ahead auction closes</text>
+  <text x="150" y="379" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Energy for all of D.</text>
+  <text x="36" y="431" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#315f48">15:00</text>
+  <circle cx="125" cy="423" r="7" fill="#315f48" />
+  <text x="150" y="431" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">IDA1 closes</text>
+  <text x="150" y="462" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Energy for all of D.</text>
+  <text x="36" y="514" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#315f48">22:00</text>
+  <circle cx="125" cy="506" r="7" fill="#315f48" />
+  <text x="150" y="514" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">IDA2 closes</text>
+  <text x="150" y="545" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Energy for all of D.</text>
+  <rect x="22" y="568" width="516" height="156" rx="10" fill="#edf2f7" stroke="#b8cbd9" />
+  <text x="40" y="601" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#265a80">IN PARALLEL · BEFORE DELIVERY</text>
+  <text x="40" y="636" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">aFRR &amp; mFRR: procure reserve capacity.</text>
+  <text x="40" y="667" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">GOPACS: day-ahead arrangements</text>
+  <text x="40" y="696" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">and intraday redispatch for congestion.</text>
+  <rect x="22" y="748" width="516" height="50" rx="8" fill="#e7ecdd" />
+  <text x="40" y="781" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" font-style="normal" fill="#2b382e">D · The delivery day</text>
+  <path d="M 125 834 V 888" stroke="#7a8b72" stroke-width="3" />
+  <text x="36" y="846" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#315f48">10:00</text>
+  <circle cx="125" cy="838" r="7" fill="#315f48" />
+  <text x="150" y="846" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">IDA3 closes</text>
+  <text x="150" y="877" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Energy for 12:00–24:00 on D.</text>
+  <rect x="22" y="912" width="516" height="298" rx="10" fill="#234f3b" />
+  <text x="40" y="946" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#f8f8ef" letter-spacing="1">18:00–18:15 · PHYSICAL DELIVERY</text>
+  <text x="40" y="982" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" font-style="normal" fill="#f8f8ef">Produce, consume &amp; balance</text>
+  <text x="40" y="1017" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" font-style="normal" fill="#f8f8ef">FCR · automatic frequency response</text>
+  <text x="40" y="1053" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" font-style="normal" fill="#f8f8ef">aFRR · automatic restoration control</text>
+  <text x="40" y="1089" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" font-style="normal" fill="#f8f8ef">mFRR · restoration on request</text>
+  <text x="40" y="1132" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" font-style="normal" fill="#f8f8ef">GOPACS · agreed local adjustments</text>
+  <text x="40" y="1175" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#f8f8ef">Parallel actions; reserve functions can overlap.</text>
+  <text x="40" y="1249" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">After this interval ↓</text>
+  <text x="40" y="1281" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Post-delivery trading, where available,</text>
+  <text x="40" y="1309" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">then settlement of residual imbalances.</text>
+  <rect x="22" y="1336" width="516" height="128" rx="8" fill="#e7ecdd" />
+  <text x="40" y="1369" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#2b382e">Continuous intraday trading</text>
+  <text x="40" y="1400" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Runs alongside the IDAs, until the</text>
+  <text x="40" y="1428" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">applicable gate closure. Deadlines</text>
+  <text x="40" y="1456" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">depend on the contract and trading route.</text>
+  <text x="26" y="1502" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Order deadlines · spacing is not to scale</text>
+</svg>

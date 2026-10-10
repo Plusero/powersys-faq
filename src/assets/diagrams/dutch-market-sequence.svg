@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1390" viewBox="0 0 560 1390" role="img" aria-labelledby="title desc">
+  <title id="title">Dutch electricity markets and parallel grid services</title>
+  <desc id="desc">Energy trading progresses from forward contracts through day-ahead and intraday. FCR, aFRR and mFRR each have reserve capacity procured in advance and activation as needed during delivery. GOPACS coordinates day-ahead congestion arrangements and intraday redispatch, with local adjustments during delivery. These services operate in parallel. Post-delivery trading where available and residual imbalance settlement follow delivery.</desc>
+  <rect x="1" y="1" width="558" height="1388" rx="10" fill="#fcfbf6" stroke="#d2d7c9" />
+  <text x="26" y="36" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#315f48">ONE DELIVERY INTERVAL</text>
+  <text x="26" y="76" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" font-style="normal" fill="#2b382e">Markets and grid services</text>
+  <text x="26" y="109" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Time moves from before to during to after delivery.</text>
+  <rect x="22" y="132" width="516" height="254" rx="10" fill="#f0f3e9" stroke="#cbd6bd" />
+  <text x="42" y="167" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#315f48">BEFORE DELIVERY · ENERGY TRADING</text>
+  <text x="46" y="207" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#2b382e">Forward contracts &amp; futures</text>
+  <text x="46" y="234" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="normal" font-style="normal" fill="#2b382e">Agree supply or hedge prices ahead.</text>
+  <path d="M 58 243 v 18" stroke="#315f48" stroke-width="2" />
+  <path d="M 53 258 l 5 7 l 5 -7 Z" fill="#315f48" />
+  <text x="46" y="293" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#2b382e">Day-ahead auction</text>
+  <path d="M 58 303 v 18" stroke="#315f48" stroke-width="2" />
+  <path d="M 53 318 l 5 7 l 5 -7 Z" fill="#315f48" />
+  <text x="46" y="353" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" font-style="normal" fill="#2b382e">Intraday auctions &amp; continuous trading</text>
+  <text x="26" y="427" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" font-style="normal" fill="#2b382e">Parallel services for the same interval</text>
+  <text x="26" y="458" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Each row below runs alongside energy trading.</text>
+  <rect x="22" y="480" width="516" height="150" rx="10" fill="#f0f3e9" stroke="#cbd6bd" />
+  <rect x="22" y="490" width="5" height="130" fill="#795516" />
+  <text x="42" y="512" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" font-style="normal" fill="#795516">FCR</text>
+  <text x="132" y="511" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" font-style="normal" fill="#2b382e">Frequency containment reserve</text>
+  <text x="42" y="546" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">BEFORE DELIVERY</text>
+  <text x="308" y="546" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">DURING DELIVERY</text>
+  <text x="42" y="579" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Procure capacity</text>
+  <text x="42" y="606" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">in advance</text>
+  <text x="308" y="579" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Automatic response</text>
+  <text x="308" y="606" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">to frequency</text>
+  <path d="M 266 580 h 24" stroke="#315f48" stroke-width="2" />
+  <path d="M 286 575 l 7 5 l -7 5 Z" fill="#315f48" />
+  <rect x="22" y="646" width="516" height="150" rx="10" fill="#f0f3e9" stroke="#cbd6bd" />
+  <rect x="22" y="656" width="5" height="130" fill="#265a80" />
+  <text x="42" y="678" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" font-style="normal" fill="#265a80">aFRR</text>
+  <text x="132" y="677" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" font-style="normal" fill="#2b382e">Automatic frequency restoration reserve</text>
+  <text x="42" y="712" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">BEFORE DELIVERY</text>
+  <text x="308" y="712" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">DURING DELIVERY</text>
+  <text x="42" y="745" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Procure capacity</text>
+  <text x="42" y="772" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">in advance</text>
+  <text x="308" y="745" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Automatic control</text>
+  <text x="308" y="772" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">restores balance</text>
+  <path d="M 266 746 h 24" stroke="#315f48" stroke-width="2" />
+  <path d="M 286 741 l 7 5 l -7 5 Z" fill="#315f48" />
+  <rect x="22" y="812" width="516" height="150" rx="10" fill="#f0f3e9" stroke="#cbd6bd" />
+  <rect x="22" y="822" width="5" height="130" fill="#6c4b85" />
+  <text x="42" y="844" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" font-style="normal" fill="#6c4b85">mFRR</text>
+  <text x="132" y="843" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" font-style="normal" fill="#2b382e">Manual frequency restoration reserve</text>
+  <text x="42" y="878" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">BEFORE DELIVERY</text>
+  <text x="308" y="878" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">DURING DELIVERY</text>
+  <text x="42" y="911" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Procure capacity</text>
+  <text x="42" y="938" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">in advance</text>
+  <text x="308" y="911" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Activation on request</text>
+  <text x="308" y="938" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">supports restoration</text>
+  <path d="M 266 912 h 24" stroke="#315f48" stroke-width="2" />
+  <path d="M 286 907 l 7 5 l -7 5 Z" fill="#315f48" />
+  <rect x="22" y="978" width="516" height="156" rx="10" fill="#edf2f7" stroke="#b8cbd9" />
+  <text x="42" y="1011" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" font-style="normal" fill="#265a80">GOPACS · Congestion management</text>
+  <text x="42" y="1045" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">BEFORE DELIVERY</text>
+  <text x="308" y="1045" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" font-style="normal" fill="#596658">DURING DELIVERY</text>
+  <text x="42" y="1077" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Day-ahead limits</text>
+  <text x="42" y="1105" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Intraday redispatch</text>
+  <path d="M 266 1077 h 24" stroke="#315f48" stroke-width="2" />
+  <path d="M 286 1072 l 7 5 l -7 5 Z" fill="#315f48" />
+  <text x="308" y="1077" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">Adjust local flows</text>
+  <text x="308" y="1105" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="normal" font-style="normal" fill="#2b382e">as agreed</text>
+  <text x="26" y="1167" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Activate reserves as needed; their functions can overlap.</text>
+  <text x="26" y="1194" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">GOPACS addresses local congestion, not system balance.</text>
+  <rect x="22" y="1220" width="516" height="116" rx="10" fill="#234f3b" stroke="#234f3b" />
+  <text x="42" y="1252" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" font-style="normal" fill="#f8f8ef">AFTER DELIVERY</text>
+  <text x="42" y="1285" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#f8f8ef">Post-delivery trading, where available</text>
+  <text x="42" y="1315" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" font-style="normal" fill="#f8f8ef">→ Settlement of remaining imbalances</text>
+  <text x="26" y="1369" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" font-style="normal" fill="#596658">Schematic timing · product-specific rules apply</text>
+</svg>

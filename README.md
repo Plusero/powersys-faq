@@ -61,6 +61,17 @@ Frontmatter fields:
 
 Use `public/` for assets that should be copied directly to the website. When linking an asset from an article, include the site's configured base path, for example `/powersys-faq/images/my-diagram.svg`. Check the rendered article with the production preview before publishing.
 
+## Edit the market diagrams
+
+The Dutch electricity market figures have a maintained [Python source](scripts/generate-market-diagrams.py). Edit the labels, colours, and layout there, then regenerate the SVGs with:
+
+```sh
+python3 scripts/generate-market-diagrams.py
+python3 scripts/generate-market-diagrams.py --check
+```
+
+Python 3.9+ is needed only for diagram editing; no additional packages are required. Keep both the source and generated SVGs in version control. See [the diagram editing guide](docs/market-diagrams.md) for output paths and visual checks.
+
 ## Deploy to GitHub Pages
 
 The repository is configured for **https://plusero.github.io/powersys-faq/**. This is the expected deployment URL; it becomes available after GitHub Pages is enabled and the deployment succeeds.
@@ -109,6 +120,7 @@ You can update the defaults in `site.config.mjs` if the change should also apply
 
 ```text
 src/content/faqs/          Markdown FAQ articles
+src/assets/diagrams/       Generated SVG article figures
 src/content.config.ts     Article frontmatter schema
 src/pages/                Homepage, FAQ archive, articles, and feeds
 src/components/           Shared interface components
